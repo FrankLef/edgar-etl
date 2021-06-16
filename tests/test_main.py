@@ -2,7 +2,7 @@
 import pytest
 from click.testing import CliRunner
 
-from edgar_etl import __main__
+from src.edgar_etl import __main__
 
 
 @pytest.fixture
