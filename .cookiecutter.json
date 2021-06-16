@@ -1,0 +1,11 @@
+{
+  "_template": "https://github.com/cjolowicz/cookiecutter-hypermodern-python.git",
+  "author": "Fran\u00e7ois Lefebvre ",
+  "email": "flefebvre01@hotmail.com",
+  "friendly_name": "EDGAR ETL",
+  "github_user": "FrankLef",
+  "license": "MIT",
+  "package_name": "edgar_etl",
+  "project_name": "edgar-etl",
+  "version": "0.1.0"
+}
