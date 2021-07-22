@@ -1,4 +1,4 @@
-"""Singleton with the EDGAR specs such as url, rss prefix"""
+"""Singleton with the EDGAR specs such as url and prefix"""
 
 # The public example provided by IANA
 EXAMPLE_URL = 'http://example.com'

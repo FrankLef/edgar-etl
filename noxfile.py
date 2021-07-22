@@ -130,16 +130,11 @@ def mypy(session: Session) -> None:
 def tests(session: Session) -> None:
     """Run the test suite."""
     session.install(".")
-    session.install("coverage[toml]", "pytest", "pygments")
-    # this line is a manual edit and warns about skipping the coverage
-    # print(f"\x1b[1;31mcoverage is skipped!\x1b[0m")
-    # the next lines are commented out to avoid running coverage
-    try:
-        session.run("coverage", "run", "--parallel",
-                    "-m", "pytest", *session.posargs)
-    finally:
-        if session.interactive:
-            session.notify("coverage")
+    session.install("pytest", "pygments")
+    # use this command to get summary whit filename and dots (preferred)
+    session.run("pytest", "-v", "-ra", "-q", "tests")
+    # use this command to get result for each single test
+    # session.run("pytest", "-v", "tests")
 
 
 @session
