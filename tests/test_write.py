@@ -9,11 +9,6 @@ def prefix():
     return registry.rss_prefix()
 
 
-@pytest.fixture
-def test_url():
-    return registry.test_url()
-
-
 def test_write_fn(prefix: str) -> None:
     """Is the filename written correctly?
 
