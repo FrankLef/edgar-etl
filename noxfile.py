@@ -137,10 +137,24 @@ def tests(session: Session) -> None:
     # session.run("pytest", "-v", "tests")
 
 
+# @session
+# def coverage(session: Session) -> None:
+#     """Produce the coverage report."""
+#     # install coverage with extra `[toml]` to have configuration
+#     # in `pyproject.toml`
+#     print("NEW")
+#     session.install("coverage[toml]")
+#     session.run("coverage", "erase")
+#     session.run("coverage", "run", "-m", "pytest", "tests")
+#     session.run("coverage", "combine")
+#     session.run("coverage", "report")
+#     session.run("coverage", "html")
+
 @session
 def coverage(session: Session) -> None:
     """Produce the coverage report."""
     # Do not use session.posargs unless this is the only session.
+    print("OLD")
     nsessions = len(session._runner.manifest)
     has_args = session.posargs and nsessions == 1
     args = session.posargs if has_args else ["report"]
